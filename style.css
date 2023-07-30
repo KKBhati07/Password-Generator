@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+/* Declaring variables to root */
+:root {
+    --fontColor: rgb(255, 255, 255);
+    /* --itemColor: rgb(69, 28, 109); */
+    --itemColor: rgb(156, 23, 85);
+    --backgroundColor: rebeccapurple;
+    --buttonColor: #ecb602;
+    /* --containerColor: rgb(46, 12, 80); */
+    --containerColor: rgba(102, 11, 53, 0.651);
+    --containerColor: rgba(102, 11, 53, 0.651);
+    --elementColor: rgb(255, 255, 255);
+    --successNotifyColor: rgb(226, 64, 104);
+    --errorNotifyColor: rgb(150, 28, 21);
+}
+
+
+
+/* TO CUSTOMIZE TOASTR NOTIFICATIONS */
+
+#toast-container>div.toast {
+    opacity: 1;
+}
+
+.toast-success {
+    background-color: var(--successNotifyColor);
+}
+
+.toast-error {
+    background-color: var(--errorNotifyColor);
+
+}
+
+
+
+
+
+ /* setting root and body elements */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: var(--backgroundColor); */
+    background-image: url(./images/backgrounds/3.jpg);
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* styling the elements */
+
+.pw-container {
+    /* background-image: url(./images/backgrounds/3.jpg); */
+    background-color: var(--containerColor);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    min-width: 400px;
+}
+
+.pw-header {
+    padding: 1rem;
+}
+
+.pw {
+    background-color: var(--itemColor);
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    position: relative;
+    padding: 1rem;
+    overflow: auto;
+}
+
+.pw button {
+    background-color: var(--fontColor);
+    border: none;
+    color: rgb(29, 2, 56);
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 0.25rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(0, 20%);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    opacity: 0;
+}
+
+.pw:hover button {
+    opacity: 1;
+    transform: translate(0, 0%);
+}
+
+.pw-body {
+    padding: 0 1rem 1rem;
+}
+
+.form-control {
+    color: var(--fontColor);
+    display: flex;
+    justify-content: space-between;
+    margin: 0.75rem 0;
+}
+
+
+.generate {
+    background-color: var(--buttonColor);
+    border: none;
+    color: rgb(156, 23, 85);
+    cursor: pointer;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    width: 100%;
+}
